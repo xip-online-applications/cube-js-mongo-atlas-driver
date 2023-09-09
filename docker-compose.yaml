@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  cube_api:
+    image: cubejs/cube:dev
+    volumes:
+      - ./:/mongo-atlas-jdbc-cubejs-driver/
+
