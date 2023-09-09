@@ -21,6 +21,14 @@ This drivers improves the default JDBC driver by extracting metadata from the JD
 
 This software is alpha software and should not be used in production.
 
+To run this driver use the following Dockerfile:
+
+    FROM cubejs/cube:jdk
+    RUN echo '{}' > package.json
+    
+    RUN npm install mongo-atlas-jdbc-cubejs-driver
+
+
 Github url: https://github.com/xip-online-applications/cube-js-mongo-atlas-driver
 
 
