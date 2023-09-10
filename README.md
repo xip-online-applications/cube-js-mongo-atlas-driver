@@ -14,7 +14,8 @@ To use this driver you need to configure it as follows:
 - CUBEJS_JDBC_URL=[JDBC url from Mongo Atlas]
 - CUBEJS_DB_PASS=[password]
 - CUBEJS_DB_PORT=27017
-- CUBEJS_DB_NAME=[username]
+- CUBEJS_DB_USER=[username]
+- CUBEJS_DB_NAME=[database]
 - CUBEJS_DB_SSL=true
 
 This drivers improves the default JDBC driver by extracting metadata from the JDBC metadata instead of the values from the query.

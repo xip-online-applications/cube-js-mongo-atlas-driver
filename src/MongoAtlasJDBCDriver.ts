@@ -113,6 +113,7 @@ export class MongoAtlasJDBCDriver extends JDBCDriver implements DriverInterface 
         const config: MongoAtlasJDBCConfiguration = {
             ...conf,
             url,
+            database: process.env.CUBEJS_DB_NAME,
             dbType: 'mongo-atlas-jdbc',
             drivername: 'com.mongodb.jdbc.MongoDriver',
             properties: {

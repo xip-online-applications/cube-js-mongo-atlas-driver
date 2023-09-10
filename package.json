@@ -2,7 +2,7 @@
   "name": "mongo-atlas-jdbc-cubejs-driver",
   "description": "Cube.js Mongo Atlas JDBC database driver",
   "author": "Cube Dev, Inc.",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
