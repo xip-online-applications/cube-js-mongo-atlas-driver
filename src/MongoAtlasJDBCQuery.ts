@@ -1,10 +1,11 @@
-import {MongoBiQuery} from '@cubejs-backend/schema-compiler/dist/src/adapter/MongoBiQuery';
 import R from 'ramda';
+import {BaseQuery} from "@cubejs-backend/schema-compiler";
+import moment from 'moment-timezone';
 
 /**
  * @override
  */
-export class MongoAtlasJDBCQuery extends MongoBiQuery {
+export class MongoAtlasJDBCQuery extends BaseQuery {
 
   public groupByClause() {
     const dimensionsForSelect = this.dimensionsForSelect();
@@ -15,4 +16,14 @@ export class MongoAtlasJDBCQuery extends MongoBiQuery {
 
     return dimensionColumns.length ? ` GROUP BY ${dimensionColumns.join(', ')}` : '';
   }
+
+  convertTz(field: string): string {
+    throw new Error('Not implemented');
+  }
+
+  timeStampCast(value: any): string {
+    return `${value}::timestamp`;
+  }
+
+
 }
