@@ -33,7 +33,7 @@ export class MongoAtlasJDBCQuery extends BaseQuery {
   }
 
   convertTz(field: string): string {
-    throw new Error('Not implemented');
+    return `(${field}::timestamptz AT TIME ZONE '${this.timezone}')`;
   }
 
   timeStampCast(value: any): string {
