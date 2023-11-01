@@ -257,8 +257,6 @@ export class MongoAtlasJDBCDriver extends JDBCDriver implements DriverInterface 
     }
 
     override async query<R = unknown>(query: string, values: unknown[]): Promise<R[]> {
-        query.replace(/= >/g, '=>');
-
         const resultSet: any = await super.query(query, values);
         const toObjArrayAsync = resultSet.toObjArray && promisify(resultSet.toObjArray.bind(resultSet));
 
