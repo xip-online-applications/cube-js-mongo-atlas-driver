@@ -1,5 +1,5 @@
-import { MongoAtlasJDBCDriver } from './MongoAtlasJDBCDriver';
+import { MongoAtlasDriver } from './MongoAtlasDriver';
 
-export default MongoAtlasJDBCDriver;
+export default MongoAtlasDriver;
 
-export { MongoAtlasJDBCDriver };
+export { MongoAtlasDriver };
